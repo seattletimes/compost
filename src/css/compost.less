@@ -1,0 +1,137 @@
+
+@import "values";
+@import "seattletimes";
+
+.caption {
+  color: #7e838b;
+  font-style: italic;
+  font-family: "ff-dagny-web-pro", Helvetica Neue, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+  padding-left: 20px;
+}
+
+.h4 
+
+
+.left {
+  float: left;
+  margin-right: 2%;
+  width: 48%;
+  max-width: 400px;
+
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+.left-big {
+  float: left;
+  margin-right: 3%;
+  width: 60%;
+  max-width: 600px;
+
+  @media @mobile {
+  width: 100%
+  }
+}
+
+.right {
+  float: left;
+  width: 50%;
+  max-width: 400px;
+  @media @mobile {
+    width: 100%;
+  }
+}
+
+.right-small {
+  float: left;
+  width: 37%;
+  @media @mobile {
+  width: 100%;
+  }
+}
+
+.down {
+  margin-top: 55px;
+}
+
+.three {
+  width: 30%;
+  margin-right: 2%;
+  float: left;
+  @media @mobile {
+    width: 100%;
+  }
+  h6 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+  }
+}
+
+
+
+.clearing {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+ol {
+  counter-reset: li;
+  list-style: none;
+  *list-style: decimal;
+  list-style-position: outside;
+}
+
+
+.rounded-list {
+  li {
+    position: relative;
+    line-height: 36px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  li:before{
+    content: counter(li);
+      counter-increment: li;
+      position: absolute; 
+      left: -2.5em;
+      top: 60%;
+      margin-top: -1.3em;
+      background: #0a3555;
+      height: 2em;
+      width: 2em;
+      line-height: 2em;
+      text-align: center;
+      border-radius: 2em;
+      font-size: 14px;
+      color: white;
+      font-family: @gfont;
+  }
+}
+
+
+
+.bullet-list {
+  padding-left: 0px;
+  
+  li {
+    color:#444; 
+    list-style:none; 
+  }
+
+  li:before {
+      color:#006eaa; /* set color to red */
+      content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+      font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+      padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+      position:relative;
+      top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+  }
+}

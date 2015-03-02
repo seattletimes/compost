@@ -1,18 +1,103 @@
 <!doctype html>
 <html>
-  <head>
-    <title><%= json.project.title %></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <%= t.include("partials/_adHead.html") %>
-  </head>
-  <body>
+<head>
+  <title><%= json.project.title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+ <%= t.include("partials/_adHead.html") %>
+</head>
+<body>
 
-Something new
+<responsive-child class="map-container">
 
-    <script src="app.js"></script>
-    <%= json.project.production ? t.include("partials/_adFoot.html") : "" %>
-    <%= json.project.production ? t.include("partials/_workHere.html") : "" %>
-  </body>
+<div class="three">
+  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/compost-icon-green-sm.jpg">
+  <h4>Compost</h4></center>
+  <p>This includes food — <strong>all food, even shells, bones and pits.</strong> It also includes paper and cardboard that’s soiled with food, like paper towels and pizza boxes. However, if the paper or cardboard has a shiny coating, it cannot be composted. Those materials can be recycled if clean; otherwise, they’re garbage. Some containers, like certain meat trays and takeout containers, are compostable. You can spot them by their tan or beige color. Other takeout items, distributed by the Cedar Grove compost facility, have brown stripes and Cedar Grove’s logo — these are also compostable.</p>
+</div>
+
+<div class="three">
+  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/recycle-icon-blue-sm.jpg">
+  <h4>Recycle</h4></center>
+  <p>Keep it <strong>simple and clean.</strong> Only materials in their purest state can be recycled. Cardboard, paper, hard plastics and aluminum foil are recyclable materials, but they have to be <strong>clean and dry.</strong> One more thing: the items can’t be tiny; plastic and metal lids, for example, have to be at least 3 inches wide (this counts out bottle caps). Also on the recycle list: newspaper bags, dry cleaning bags, shrink wrap, Bubble Wrap and grocery bags (but not produce bags). These must clean and stuffed together — single plastic bags get caught in machines at the recycling facility.You might notice some items are marked with the triangular recycle symbol — <strong>ignore this</strong>, at least in Seattle. That denotes only the kind of plastic resin used in the item, not whether the item is recyclable.</p>
+</div>
+
+<div class="three">
+  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/trash-icon-orange-sm.jpg">
+  <h4>Garbage</h4></center>
+  <p>Everything that doesn’t fit the rules for recycling or compost goes in the garbage, and you probably have more garbage than you think. A common trash material is <strong>soft plastic</strong>, used in candy bar wrappers and Ziploc bags. The only soft plastics that can be recycled are newspaper bags, dry cleaning bags, shrink wrap, Bubble Wrap and grocery bags (but not produce bags). These all have to be clean and stuffed together — single plastic bags get caught in machines at the recycling facility. Another trash plastic is blister packaging — the hard-to-open plastic used for electronics and pills. Other trash items are orange prescription pill bottles, corks and any thin paper such as tissue paper.</p>
+</div>
+
+<div class="clearing"></div>
+
+
+
+
+  <div id='menu' class="dog-menu">
+    <input class="hidden" type="checkbox" checked id="names">
+    <label for="names" class="name-button">Top dog names</label> 
+    <a class="selected type-button" data-type="dogs_per_sm"><i class='fa fa-paw'></i> Dog Density</a> 
+    <a class="type-button" data-type="dogs_per_1k"><i class='fa fa-paw'></i> Dog Ownership Rate</a> 
+    <a class="type-button" data-type="avg_spending"><i class='fa fa-paw'></i> Average pet spending</a> 
+  </div>
+<div class="map-box">
+  <div class="aspect-ratio-outer">
+    <div class="aspect-ratio-inner">
+
+      <leaflet-map zoom=12>
+        <tile-layer layer="cartoPositron"></tile-layer>
+      </leaflet-map>
+
+    </div>
+  </div>
+
+  <aside class="legend">
+    <div id ="titletext" class="bigheader">Map legend</div>
+    <ul class="scale">
+      <li> <span class="block" style="background-color: #f9f8cf"></span><span id= "text5"> Lime</span>
+      <li> <span class="block" style="background-color: #a4d6b2"></span><span id= "text4"> Lime</span>
+      <li> <span class="block" style="background-color: #6cc1cd"></span> <span id= "text3">Lemon</span>
+      <li> <span class="block" style="background-color: #006eaa"></span><span id ="text2">Orange</span>
+      <li><span class="block" style="background-color: #0a3555"></span><span id= "text1">Cherry</span>
+      <!-- <hr>
+      <li> <span class="block" style="background-color: #bc8cbe"></span><span id= ""> Dog parks</span> -->
+    </ul>
+    <cite class="source">Sources: Seattle Animal Shelter, Nielsen <span class="legend-credit">Map by Garland Potts / The Seattle Times</span></cite>
+  </aside>
+</div>
+
+  <div class="left-big down">
+  <img src="assets/poodle-straggler.jpg" >
+  <p class="caption">(Kelly Shea / The Seattle Times)</p>
+</div>
+
+<div class="right-small">
+  <h2>Most Unusual Breeds</h2>
+  <ul class="bullet-list">
+    <li>Curly-Coated Retriever</li>
+    <li>Cirneco Dell’Etna</li>
+    <li>Wolf Hybrid (Wolfdog)</li>
+    <li>Kyi-leo</li>
+    <li>Sussex Spaniel</li>
+    <li>Sealyham Terrier</li>
+    <li>Landseer</li>
+    <li>McNab</li>
+    <li>Norwegian Lundehund</li>
+    <li>Silken Windhound</li>
+  </ul>
+</div>
+
+
+<div class="clearing"></div>
+
+</responsive-child>
+
+<script src="app.js"></script>
+<% /*= t.include("partials/_adFoot.html"); */ %>
+<%= t.include("partials/_workHere.html") %>
+
+</body>
 </html>

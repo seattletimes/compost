@@ -1,18 +1,17 @@
 {
   "s3": {
     "stage": {
-      "bucket": "",
-      "path": ""
+      "bucket": "apps-stage.seattletimesdata.com",
+      "path": "fyiguy-dogmap"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/fyiguy/dog-map"
     }
   },
   "title": "",
   "description": "",
   "url": "",
   "slug": "",
-  "tags": [],
-  "production": false
+  "tags": []
 }
