@@ -5,90 +5,126 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
-   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
  <%= t.include("partials/_adHead.html") %>
 </head>
 <body>
 
 <responsive-child class="map-container">
 
-<div class="three">
-  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/compost-icon-green-sm.jpg">
-  <h4>Compost</h4></center>
+<div class="trash-type">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/compost-icon-green-sm.jpg">
+  <h4>Compost</h4>
   <p>This includes food — <strong>all food, even shells, bones and pits.</strong> It also includes paper and cardboard that’s soiled with food, like paper towels and pizza boxes. However, if the paper or cardboard has a shiny coating, it cannot be composted. Those materials can be recycled if clean; otherwise, they’re garbage. Some containers, like certain meat trays and takeout containers, are compostable. You can spot them by their tan or beige color. Other takeout items, distributed by the Cedar Grove compost facility, have brown stripes and Cedar Grove’s logo — these are also compostable.</p>
 </div>
 
-<div class="three">
-  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/recycle-icon-blue-sm.jpg">
-  <h4>Recycle</h4></center>
-  <p>Keep it <strong>simple and clean.</strong> Only materials in their purest state can be recycled. Cardboard, paper, hard plastics and aluminum foil are recyclable materials, but they have to be <strong>clean and dry.</strong> One more thing: the items can’t be tiny; plastic and metal lids, for example, have to be at least 3 inches wide (this counts out bottle caps). Also on the recycle list: newspaper bags, dry cleaning bags, shrink wrap, Bubble Wrap and grocery bags (but not produce bags). These must clean and stuffed together — single plastic bags get caught in machines at the recycling facility.You might notice some items are marked with the triangular recycle symbol — <strong>ignore this</strong>, at least in Seattle. That denotes only the kind of plastic resin used in the item, not whether the item is recyclable.</p>
+<div class="trash-type">
+  <div class="center"><img class="center" src="http://static.seattletimes.com/wp-content/uploads/2015/02/recycle-icon-blue-sm.jpg">
+  <h4>Recycle</h4>
+  <p>Keep it <strong>simple and clean.</strong> Only materials in their purest state can be recycled. Cardboard, paper, hard plastics and aluminum foil are recyclable materials, but they have to be <strong>clean and dry.</strong> One more thing: the items can’t be tiny; plastic and metal lids, for example, have to be at least 3 inches wide (this counts out bottle caps). Also on the recycle list: newspaper bags, dry cleaning bags, shrink wrap, Bubble Wrap and grocery bags (but not produce bags). These must clean and stuffed together — single plastic bags get caught in machines at the recycling facility.You might notice some items are marked with the triangular recycle symbol — <strong>ignore this</strong>, at least in Seattle. That denotes only the kind of plastic resin used in the item, not whether the item is recyclable.</p></div>
 </div>
 
-<div class="three">
-  <center><img src="http://static.seattletimes.com/wp-content/uploads/2015/02/trash-icon-orange-sm.jpg">
-  <h4>Garbage</h4></center>
+<div class="trash-type">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/trash-icon-orange-sm.jpg">
+  <h4>Garbage</h4>
   <p>Everything that doesn’t fit the rules for recycling or compost goes in the garbage, and you probably have more garbage than you think. A common trash material is <strong>soft plastic</strong>, used in candy bar wrappers and Ziploc bags. The only soft plastics that can be recycled are newspaper bags, dry cleaning bags, shrink wrap, Bubble Wrap and grocery bags (but not produce bags). These all have to be clean and stuffed together — single plastic bags get caught in machines at the recycling facility. Another trash plastic is blister packaging — the hard-to-open plastic used for electronics and pills. Other trash items are orange prescription pill bottles, corks and any thin paper such as tissue paper.</p>
 </div>
 
 <div class="clearing"></div>
 
+<h3>Still confused? OK, one thing at a time</h3>
+<p>Here’s a list of items readers asked about and where they go. Have a question about something not on this list? Ask us in <a href="http://www.seattletimes.com/seattle-news/what-do-i-do-with-a-guide-to-trash-sorting-in-seattle/#comments">the comments</a>, or use the city’s <a href="http://www.seattle.gov/util/MyServices/LookItUpWhatsAccepted/index.htm">look-up tool</a>.</p>
 
+<h4>Takeout containers</h4>
 
+<p>This depends on the material of the container, and whether it’s clean or dirty. Cardboard and other paper-based packaging typically break down in compost, but they won’t if they’re covered with a shiny coating. If a container has a shiny coating and is clean (not soiled or soaked through with grease or other food) you can recycle it. Otherwise, it’s garbage. Styrofoam is always garbage. So:</p>
 
-  <div id='menu' class="dog-menu">
-    <input class="hidden" type="checkbox" checked id="names">
-    <label for="names" class="name-button">Top dog names</label> 
-    <a class="selected type-button" data-type="dogs_per_sm"><i class='fa fa-paw'></i> Dog Density</a> 
-    <a class="type-button" data-type="dogs_per_1k"><i class='fa fa-paw'></i> Dog Ownership Rate</a> 
-    <a class="type-button" data-type="avg_spending"><i class='fa fa-paw'></i> Average pet spending</a> 
-  </div>
-<div class="map-box">
-  <div class="aspect-ratio-outer">
-    <div class="aspect-ratio-inner">
-
-      <leaflet-map zoom=12>
-        <tile-layer layer="cartoPositron"></tile-layer>
-      </leaflet-map>
-
-    </div>
-  </div>
-
-  <aside class="legend">
-    <div id ="titletext" class="bigheader">Map legend</div>
-    <ul class="scale">
-      <li> <span class="block" style="background-color: #f9f8cf"></span><span id= "text5"> Lime</span>
-      <li> <span class="block" style="background-color: #a4d6b2"></span><span id= "text4"> Lime</span>
-      <li> <span class="block" style="background-color: #6cc1cd"></span> <span id= "text3">Lemon</span>
-      <li> <span class="block" style="background-color: #006eaa"></span><span id ="text2">Orange</span>
-      <li><span class="block" style="background-color: #0a3555"></span><span id= "text1">Cherry</span>
-      <!-- <hr>
-      <li> <span class="block" style="background-color: #bc8cbe"></span><span id= ""> Dog parks</span> -->
-    </ul>
-    <cite class="source">Sources: Seattle Animal Shelter, Nielsen <span class="legend-credit">Map by Garland Potts / The Seattle Times</span></cite>
-  </aside>
+<div class="takeout">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/pizza-300x197.jpg">
+  <p>Not shiny, and dirty: <span style="color: #59a56c;"><strong>compost</strong></span></p>
 </div>
 
-  <div class="left-big down">
-  <img src="assets/poodle-straggler.jpg" >
-  <p class="caption">(Kelly Shea / The Seattle Times)</p>
+<div class="takeout">
+ <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/wtake.jpg">
+  <p>Shiny and dirty: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+<div class="clearing"></div>
+<div class="takeout">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/clamshell.jpg">
+  <p>Not shiny, and clean: <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
 </div>
 
-<div class="right-small">
-  <h2>Most Unusual Breeds</h2>
-  <ul class="bullet-list">
-    <li>Curly-Coated Retriever</li>
-    <li>Cirneco Dell’Etna</li>
-    <li>Wolf Hybrid (Wolfdog)</li>
-    <li>Kyi-leo</li>
-    <li>Sussex Spaniel</li>
-    <li>Sealyham Terrier</li>
-    <li>Landseer</li>
-    <li>McNab</li>
-    <li>Norwegian Lundehund</li>
-    <li>Silken Windhound</li>
-  </ul>
+<div class="takeout">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-clean-shiny.jpg">
+  <p>Shiny and clean: <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
 </div>
+<div class="clearing"></div>
+<h3>Coffee cups (including Starbucks)</h3>
+
+<p>Technically, Starbucks paper and plastic cups, as well as lids, are recyclable, but signage in many Starbucks locations directs customers to throw them in the garbage. (We can only assume this is because Starbucks locations don’t have areas to empty and rinse cups; Starbucks didn’t return calls.) But outside Starbucks stores, you can ignore their signage.<</p>
+
+<div class="takeout">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/r-cup.jpg">
+  <p>Clean paper cups (and sleeves): <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
+</div>
+
+<div class="takeout">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/r-lid.jpg">
+  <p>Clean lids: <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
+</div>
+<div class="clearing"></div>
+<h4>Other takeout items</h4>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-straws.jpg">
+  <p>Straws: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-utinsils.jpg">
+  <p>Plastic utensils: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/napkin-300x246.jpg" width="30%" height="30%">
+  <p>Napkins: <span style="color: #59a56c;"><strong>compost</strong></span></p>
+</div>
+<div class="clearing"></div>
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-fast-lid.jpg">
+  <p>Plastic lids (3 inches wide): <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-cola-cup.jpg">
+  <p>Paper cups: <span style="color: #5e7fbf;"><strong>recycle</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/chop-300x150.jpg">
+  <p>Disposable chopsticks: <span style="color: #59a56c;"><strong>compost</strong></span></p>
+</div>
+<div class="clearing"></div>
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-chips.jpg">
+  <p>Chip bags: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-packets.jpg">
+  <p>Condiment packets: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+
+<div class="items">
+  <img src="http://static.seattletimes.com/wp-content/uploads/2015/02/w-ocond-tubs.jpg">
+  <p>Condiment tubs: <span style="color: #f37235;"><strong>garbage</strong></span></p>
+</div>
+<div class="clearing"></div>
+ 
+
+
+
+
 
 
 <div class="clearing"></div>
