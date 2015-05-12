@@ -131,20 +131,34 @@ ol {
   list-style-position: outside;
 }
 
+
 .bullet-list {
   padding-left: 0px;
-  
+
   li {
-    color:#444; 
     list-style:none; 
   }
 
   li:before {
-      color:#006eaa; /* set color to red */
-      content:"\2022"; /* /2022 is the numerical unicode for &bull; */
-      font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-      padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
-      position:relative;
-      top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+    color:#006eaa; /* set color to blue */
+    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+    position:relative;
+    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+  } 
+
+  @media @desktop {
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
   }
+}
+
+
+
+.thanks {
+  font-style:italic;
+  color: gray;
+  margin-top: 3em;
 }
