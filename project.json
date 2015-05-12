@@ -2,16 +2,18 @@
   "s3": {
     "stage": {
       "bucket": "apps-stage.seattletimesdata.com",
-      "path": "fyiguy-dogmap"
+      "path": "void-defection"
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": "2015/fyiguy/dog-map"
+      "path": "2015/compost"
     }
   },
   "title": "",
   "description": "",
   "url": "",
   "slug": "",
-  "tags": []
+  "tags": [],
+  "embedded": true,
+  "production": true
 }

@@ -1,8 +1,9 @@
 @import "values";
+@import "flexbox";
 
 .items {
-  width: 33%;
-  float: left;
+  // width: 33%;
+  // float: left;
   padding: 10px;
 
   img {
@@ -12,12 +13,29 @@
   p {
     text-align: center;
   }
-  @media @tablet {
-    width: 100%;
-    float: none;
-  }
-  @media @mobile {
-    width: 100%;
-    float: none;
+  // @media @tablet {
+  //   width: 100%;
+  //   float: none;
+  // }
+  // @media @mobile {
+  //   width: 100%;
+  //   float: none;
+  // }
+}
+
+.item-table {
+  .display-flex;
+  .flex-wrap(wrap);
+
+  .items {
+    .flex(1 0 25%);
+
+    @media @tablet {
+      .flex(1 0 33%);
+    }
+
+    @media @mobile {
+      .flex(1 0 50%)
+    }
   }
 }
