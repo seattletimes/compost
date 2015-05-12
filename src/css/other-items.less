@@ -1,0 +1,45 @@
+.bullet-list {
+  padding-left: 0px;
+
+  li {
+    list-style:none; 
+  }
+
+  li:before {
+    color:#006eaa; /* set color to blue */
+    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
+    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+    padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+    position:relative;
+    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+  } 
+
+  @media @desktop {
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
+  }
+}
+
+.other-items {
+  width: 95%;
+  float: left;
+  padding: 10px;
+
+  ul {
+    list-style-type: disc;
+    li {
+      color: #444;
+    }
+  }
+
+  @media @tablet {
+    width: 100%;
+    float: none;
+  }
+  @media @mobile {
+    width: 100%;
+    float: none;
+  }
+}
+
