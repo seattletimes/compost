@@ -10,51 +10,11 @@ h4 {
   }
 }
 
-.caption {
-  color: #7e838b;
-  font-style: italic;
-  font-family: "ff-dagny-web-pro", Helvetica Neue, Helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 21px;
-  padding-left: 20px;
-}
-
-.trash-type {
-  width: 33.3%;
-  float: left;
-  padding: 10px 20px;
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  h4 {
-    text-align: center;
-  }
-
-  @media @tablet {
-    width: 100%;
-    float: none;
-  }
-}
-
 .takeout {
   width: 50%;
   float: left;
   padding: 10px;
-  .blue {
-    color: @blue;
-    font-weight: bold;
-  }
-  .orange {
-    color: @orange;
-    font-weight: bold;
-  }
-  .green {
-    color: @green;
-    font-weight: bold;
-  }
+  
   img {
     display: block;
     margin: 0 auto;
@@ -62,63 +22,7 @@ h4 {
   p {
     text-align: center;
   }
-  }
-
-.other-items {
-  width: 95%;
-  float: left;
-  padding: 10px;
-ul {
-list-style-type: disc;
-li {
-    color: #444;
-  }
 }
-
-  @media @tablet {
-    width: 100%;
-    float: none;
-  }
-  @media @mobile {
-    width: 100%;
-    float: none;
-  }
-}
-
-.items {
-  width: 33%;
-  float: left;
-  padding: 10px;
-
-  .blue {
-    color: @blue;
-    font-weight: bold;
-  }
-  .orange {
-    color: @orange;
-    font-weight: bold;
-  }
-  .green {
-    color: @green;
-    font-weight: bold;
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  p {
-    text-align: center;
-  }
-  @media @tablet {
-    width: 100%;
-    float: none;
-  }
-  @media @mobile {
-    width: 100%;
-    float: none;
-  }
-}
-
 
 .clearing {
   &::after {
@@ -128,41 +32,9 @@ li {
   }
 }
 
-ol {
-  counter-reset: li;
-  list-style: none;
-  *list-style: decimal;
-  list-style-position: outside;
-}
-
-
-.bullet-list {
-  padding-left: 0px;
-
-  li {
-    list-style:none; 
-  }
-
-  li:before {
-    color:#006eaa; /* set color to blue */
-    content:"\2022"; /* /2022 is the numerical unicode for &bull; */
-    font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-    padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
-    position:relative;
-    top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
-  } 
-
-  @media @desktop {
-    -webkit-columns: 2 200px;
-    -moz-columns: 2 200px;
-    columns: 2 200px;
-  }
-}
-
-
-
 .thanks {
   font-style:italic;
   color: gray;
   margin-top: 3em;
 }
+
